@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+       body {
+            height: 400px;
+            background-image: url(cart.webp);
+            background-position: contain;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 150%; 
+        }
+        .signup {
+            width: 460px;
+            height: 370px;
+            /* border: 3px solid red; */
+            box-shadow: 10px 10px 10px black;
+            background: transparent;
+            backdrop-filter: blur(20px);
+            margin-top: 260px;
+            border-radius: 20px;
+            text-align: center;
+            margin-left: 100px;
+            align-items: center;
+        }
+        form h1 {
+            margin-top: 60px;
+            position: absolute;
+            font-size: 50px;
+            font-family: 'fancy';
+            text-align: center;
+            margin-left: 200px;
+        }
+        .ib {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+        .ib input {
+            width: 300px;
+            height: 30px;
+            margin-bottom: -5px;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: -149px;
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid;
+        }
+        .ib input:focus~label,
+        .ib input:valid~label {
+            top: -20px;
+        }
+        .ib label {
+            position: absolute;
+            margin-top: 25px;
+            margin-left: -148px;
+            pointer-events: none;
+        }
+        .p {
+            position: absolute;
+            margin-top: 260px;
+            margin-left: -30px;
+            color: black;
+        }
+        .user {
+            position: relative;
+            margin-top: 10px;
+        }
+        .containeer{
+            width: 460px;
+            height: 90px;
+            /* border: 3px solid blue; */
+            position: absolute;
+            margin-top: -150px;
+            border-radius: 20px;
+            background: transparent;
+            backdrop-filter: blur(20px);
+            z-index: 1;
+        }
+        .containeer h2{
+            margin-left: 230px;
+            margin-top: 43px;
+            color: white;
+            font-size: 80px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            /* border: 3px solid red; */
+            border-radius: 20px;
+            width: 460px;
+            height: 90px;
+            z-index: -1;
+            box-shadow: 10px 10px 10px black;
+        }
+        .containeer h2:nth-child(1){
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(105, 128, 251);
+        }
+        .containeer h2:nth-child(2){
+            color: rgb(162, 111, 219);
+            animation: animate 4s ease-in-out infinite;
+        }
+  @keyframes animate {
+    0%,
+    100%{
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+} 
+
+
+    form p{
+        text-align: center;
+        font-family: fancy;
+        margin-top: 50px;
+        margin-left: 140px;
+        position: absolute;
+        font-weight: bold;
+    }
+    form button{
+        margin-top: 85px;
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        font-family: fancy;
+        font-weight: bold;
+        margin-left: -50px;
+        background-color: rgb(1, 184, 223);
+        border-radius: 20px;
+    }
+    form button:hover{
+        background-color: rgb(255, 135, 46);
+    }
+
+
+
+    
+/***
+=============================================
+  Screen for 1024px Start
+=============================================
+***/
+@media (max-width: 1024px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        /* background-size: 100%;  */
+        background-size: cover;
+        background-position: -100px;
+    }
+    .signup{
+        width: 400px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 60px;
+    }
+    .containeer h2{
+        margin-left: 200px;
+        /* border: 3px solid red; */
+       
+        width: 400px;
+    }
+    form p{
+        margin-left: 110px;
+    }
+}
+/***
+=============================================
+  Screen for 1024px Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+  Screen for 884px Start
+=============================================
+***/ 
+@media (max-width: 884px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: center;}
+    .signup{
+        width: 500px;
+        height: 470px;
+        /* border: 3px solid red; */
+        margin-left: 200px;
+    }
+    .containeer{
+        width: 500px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 250px;
+        /* border: 3px solid red; */
+        width: 500px;
+        border: 3px double black;
+        margin-top: -30px;
+    }
+    form p{
+        margin-left: 140px;
+        margin-top: 80px;
+        font-size: 20px;
+    }
+    form button{
+        margin-top: 130px;
+        width: 170px;
+        margin-left: -91px;
+    }
+    .ib{
+        margin-top: 25px;
+    }
+    .ib input{
+        margin-top: 40px;
+        width: 400px;
+        margin-left: -200px;
+    }
+    .ib label{
+        margin-top: 50px;
+        margin-left: -195px;
+    }
+}
+/***
+=============================================
+  Screen for 884px Finish
+=============================================
+***/ 
+
+
+
+/***
+=============================================
+  Screen for 834.40px Start
+=============================================
+***/ 
+@media (max-width: 834.40px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: center;}
+    .signup{
+        width: 550px;
+        height: 550px;
+        /* border: 3px solid red; */
+        margin-left: 130px;
+    }
+    .containeer{
+        width: 500px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 270px;
+        /* border: 3px solid red; */
+        width: 500px;
+        border: 3px double black;
+        margin-top: -30px;
+    }
+    form p{
+        margin-left: 140px;
+        margin-top: 80px;
+        font-size: 20px;
+    }
+    form button{
+        margin-top: 170px;
+        width: 170px;
+        margin-left: -91px;
+    }
+    .ib{
+        margin-top: 25px;
+    }
+    .ib input{
+        margin-top: 40px;
+        width: 400px;
+        margin-left: -200px;
+    }
+    .ib label{
+        margin-top: 50px;
+        margin-left: -195px;
+    }
+}
+/***
+=============================================
+  Screen for 834.40px Finish
+=============================================
+***/ 
+
+
+
+/***
+=============================================
+  Screen for 768px Start
+=============================================
+***/
+@media (max-width: 768px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: center;}
+    .signup{
+        width: 550px;
+        height: 550px;
+        /* border: 3px solid red; */
+        margin-left: 130px;
+    }
+    .containeer{
+        width: 500px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 270px;
+        /* border: 3px solid red; */
+        width: 500px;
+        border: 3px double black;
+        margin-top: -30px;
+    }
+    form p{
+        margin-left: 170px;
+        margin-top: 80px;
+        font-size: 20px;
+    }
+    form button{
+        margin-top: 170px;
+        width: 170px;
+        margin-left: -91px;
+    }
+    .ib{
+        margin-top: 25px;
+    }
+    .ib input{
+        margin-top: 40px;
+        width: 400px;
+        margin-left: -200px;
+    }
+    .ib label{
+        margin-top: 50px;
+        margin-left: -195px;
+    }
+}
+/***
+=============================================
+  Screen for 768px Finish
+=============================================
+***/  
+
+
+
+/***
+=============================================
+  Screen for 428px Start
+=============================================
+***/ 
+@media (max-width: 428px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .signup{
+        width: 380px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 13px;
+    }
+    .containeer{
+        width: 400px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 190px;
+        /* border: 3px solid red; */
+        width: 370px;
+        border: 3px double black
+    }
+    .ib{
+        margin-top: 5px;
+    }
+    .ib input{
+        margin-top: 10px;
+        width: 300px;
+        margin-left: -160px;
+    }
+    .ib label{
+        margin-top: 20px;
+        margin-left: -160px;
+    }
+    form p{
+        margin-left: 90px;
+        font-size: 17px;
+        margin-top: 40px;
+    }
+    form button{
+        margin-top: 100px;
+        width: 130px;
+        margin-left: -61px;
+    }
+}
+/***
+=============================================
+  Screen for 428px Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+  Screen for 414.40px Start
+=============================================
+***/ 
+@media (max-width: 414.40px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .signup{
+        width: 380px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 5px;
+    }
+    .containeer{
+        width: 380px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 190px;
+        /* border: 3px solid red; */
+        width: 380px;
+        border: 3px double black
+    }
+    form p{
+        margin-left: 100px;
+    }
+}
+/***
+=============================================
+  Screen for 414.40px Finish
+=============================================
+***/  
+
+
+
+/***
+=============================================
+  Screen for 393.60px Start
+=============================================
+***/ 
+@media (max-width: 393.60px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .signup{
+        width: 350px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 10px;
+    }
+    .containeer{
+        width: 350px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 175px;
+        /* border: 3px solid red; */
+        width: 350px;
+        border: 3px double black
+    }
+    .ib input{
+        margin-top: 10px;
+        width: 300px;
+        margin-left: -150px;
+    }
+    .ib label{
+        margin-top: 20px;
+        margin-left: -150px;
+    }
+    form p{
+        margin-left: 80px;
+    }
+}
+/***
+=============================================
+  Screen for 393.60px Finish
+=============================================
+***/ 
+
+
+
+/***
+=============================================
+  Screen for 390px Start
+=============================================
+***/  
+@media (max-width: 390px)
+{
+    .signup{
+        width: 350px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 10px;
+    }
+}
+/***
+=============================================
+  Screen for 390px Finish
+=============================================
+***/  
+
+
+
+
+/***
+=============================================
+  Screen for 375.20px Start
+=============================================
+***/
+@media (max-width: 375.20px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .signup{
+        width: 330px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 10px;
+        margin-top: 230px;
+    }
+    .containeer{
+        width: 330px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 165px;
+        /* border: 3px solid red; */
+        width: 330px;
+        border: 3px double black;
+        margin-top: 20px;
+    }
+    form p{
+        margin-left: 80px;
+    }
+}
+/***
+=============================================
+  Screen for 375.20px Finish
+=============================================
+***/ 
+
+
+
+/***
+=============================================
+  Screen for 360px Start
+=============================================
+***/  
+@media (max-width: 360px)
+{
+    .signup{
+        width: 330px;
+        height: 370px;
+        /* border: 3px solid red; */
+        margin-left: 5px;
+        margin-top: 200px;
+    }
+    .containeer h2{
+        margin-left: 162px;
+        /* border: 3px solid red; */
+        width: 290px;
+        border: 3px double black;
+        margin-top: 30px;
+    }
+}
+/***
+=============================================
+  Screen for 360px Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+  Screen for 320px Start
+=============================================
+***/ 
+@media (max-width: 320px)
+{
+    body{
+        height: 400px;
+        background-image: url(cart.webp);
+        background-position: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .signup{
+        width: 300px;
+        height: 330px;
+        /* border: 3px solid red; */
+        margin-left: 2px;
+        margin-top: 120px;
+    }
+    .containeer{
+        width: 300px;
+        height: 90px;
+        /* border: 3px solid blue; */
+        position: absolute;
+        margin-top: -150px;
+        border-radius: 20px;
+    }
+    .containeer h2{
+        margin-left: 142px;
+        /* border: 3px solid red; */
+        width: 290px;
+        border: 3px double black;
+        margin-top: 80px;
+    }
+    .ib input{
+        margin-top: 10px;
+        width: 270px;
+        margin-left: -140px;
+    }
+    .ib label{
+        margin-top: 20px;
+        margin-left: -140px;
+    }
+    form p{
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+    form button{
+        margin-top: 60px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <section class="signup">
+        <form>
+            <div class="containeer">
+                <h2>Signup</h2>
+                <h2>Signup</h2>
+            </div>
+            <div class="ib">
+                <input type="text" name="username" required>
+                <label for="">Username</label>
+            </div>
+            <div class="ib">
+                <input type="text" required>
+                <label for="">Last Name</label>
+            </div>
+            <div class="ib">
+                <input type="text" required>
+                <label for="">Email</label>
+            </div>
+            <div class="ib">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="ib">
+                <input type="password" required>
+                <label for="">Confirm Password</label>
+            </div>
+            <p>
+                Create an account
+                <a href="signup.html">Signup</a>
+            </p>
+            <button>Login</button>
+        </form>
+    </section>
+</body>
+</html>

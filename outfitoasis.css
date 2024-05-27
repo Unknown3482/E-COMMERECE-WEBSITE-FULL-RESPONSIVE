@@ -1,0 +1,2080 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fancy, inter;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* body{
+    height: 700px;
+    background-image: url('assassins.jpg0001.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+/***
+=============================================
+    Header Start
+=============================================
+***/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background: black;
+    box-shadow: 10px 10px 10px black;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    justify-content: space-between;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: red; */
+    background: transparent;
+    backdrop-filter: blur(50px);
+    box-shadow: 10px 5px 10px black;
+    width: 100%;
+    padding: 1.5rem 2%;
+    justify-content: space-between;
+    display: inline-flex;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(107, 102, 102), transparent);
+    top: 0;
+    left: -100%;
+    transition: .5s;
+}
+.header:hover::after{
+    left: 100%;
+}
+.logo{
+    font-size: 25px;
+    color: gray;
+    margin-top: 3px;
+    margin-left: -15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.logo img{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    margin-top: -69px;
+    margin-left: -55px;
+}
+.icons{
+    color: white;
+    font-size: 30px;
+    display: none;
+    position: absolute;
+    right: 52.3%;
+    top: 28px;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+/***
+=============================================
+    Header Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Navbar Start
+=============================================
+***/
+.navbar{
+    margin-right: 364px;
+   display: grid;
+   display: flex;
+   gap: 30px;
+}
+.navbar a {
+    font-size: 20px;
+    color: gray;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #0cf;
+}
+.btn-box2{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    height: 30px;
+    margin-left: 640px;
+    margin-top: -7px; 
+    position: absolute;
+}
+ button.btn2 a{
+    color: black;
+    font-size: 19px;
+    font-family: fancy;
+    font-weight: bold;
+}
+ button.btn2{
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color:rgb(112, 53, 72);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+    font-family: fancy;
+    position: relative;
+    font-size: 19px;
+}
+button.btn2:hover{
+    color: black;
+}
+button.btn2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40px;
+    background:rgb(255, 196, 84);
+    transition: .4s;
+    z-index: -1;
+    border-radius: 10px;
+}
+button.btn2:hover::before{
+    width: 120px;
+}
+.box{
+    position: absolute;
+    background: #2f3640;
+    height: 47px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-left: 24rem;
+    margin-top: -10px;
+    z-index: 99;
+}
+.box input{
+    position: relative;
+    margin-top: -10px;
+}
+.box:hover > .text{
+    width: 180px;
+}
+    
+    .box:hover > .btn{
+    background-color: black;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    /* float: right; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    transition: 0.6s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: -7px;
+}
+
+.btn i{
+    font-size: 30px;
+}
+.text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+     margin-top: -4px;
+    justify-content: center;
+}
+#contact{
+    width: 100%;
+    height: 700px;
+    /* border: 2px solid seagreen; */
+    background-color: springgreen;
+}
+.icons{
+    color: white;
+    font-size: 30px;
+    display: none;
+    position: absolute;
+    right: 52.3%;
+    top: 28px;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+/***
+=============================================
+    Navbar Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Home Page Start
+=============================================
+***/
+#home{
+    width: 100%;
+    height: 700px;
+    /* border: 3px solid red; */
+}
+.img img{
+    background-repeat: no-repeat;
+    width: 100%;
+    /* border: 3px solid purple; */
+    height: 657px;
+    margin-top: 82px;
+    position: absolute;
+}
+.salogn{
+    width:700px;
+    height: 280px;
+    /* border: 3px solid red; */
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 360px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: fancy;
+    z-index: 1;
+}
+.btn-box1{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 30px;
+    margin-left: 300px;
+    margin-top: 50px; 
+    position: relative;
+}
+ button.btn1 a{
+    color: black;
+    font-size: 19px;
+    font-family: fancy;
+    font-weight: bold;
+}
+ button.btn1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color:rgb(112, 53, 72);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+    font-family: fancy;
+    position: relative;
+}
+button.btn1:hover{
+    color: black;
+}
+button.btn1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40px;
+    background:rgb(255, 196, 84);
+    transition: .4s;
+    z-index: -1;
+    border-radius: 10px;
+}
+button.btn1:hover::before{
+    width: 120px;
+}
+/***
+=============================================
+    Home Page Finsih
+=============================================
+***/
+
+
+
+/***
+=============================================
+    About Page Start
+=============================================
+***/
+#about{
+   width: 100%;
+   height: 700px;
+   /* border: 3px soild  blue; */
+   background-color: black;
+   margin-top: 60px;
+}
+.container h2{
+    margin-left: 700px;
+    margin-top: 125px;
+    color: white;
+    font-size: 8em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.container h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+.container h2:nth-child(2){
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    100%{
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+section .cont{
+    width: 800px;
+    height: 400px;
+    /* border: 3px solid red; */
+    margin-top: 240px;
+    position: absolute;
+}
+section .cont p{
+    font-size: 27px;
+    font-family: fancy; 
+    text-align: center;
+    padding: 5px;
+    color: white;
+   /* margin-left: -40px; */
+   margin-top: 40px;
+} 
+section .pic{
+    width: 400px;
+    height: 400px;
+    /* border: 3px solid red; */
+    float: right;
+    margin-top: 220px;
+    margin-right: 90px;
+    box-shadow: 10px  10px 25px rgba(228, 7, 7, 0.766);
+}
+section .pic img{
+    width:400px;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+section .pic img:hover{
+    transform: scaleX(1.1);
+}
+/***
+=============================================
+    About Page Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    New Page Start
+=============================================
+***/
+#new{
+    width: 100%;
+    height: 1200px;
+    /* border: 3px solid  blue; */
+    background-color: rgb(110, 55, 72);
+    margin-top: 20px;
+}
+.label img{
+    width: 890px;
+    position: absolute;
+    height: 430px;
+    margin-left: 280px;
+    margin-top: -30px;
+}
+.containers h2{
+    margin-left: 860px;
+    margin-top: 170px;
+    color: white;
+    font-size: 90px;
+    width: 650px;
+    /* border: 3px solid purple; */
+    position: absolute;
+   transform: blink 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+.blink{
+    animation: blink 1s linear infinite;
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+.containers h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+  }
+  .containers h2:nth-child(2){
+    color:rgb(110, 55, 72);
+    animation: animate 4s ease-in-out infinite;
+  }
+  @keyframes animate {
+    0%,
+    100%{
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+} 
+.new-imag{
+    width: 90%;
+    height: 1600px;
+    /* border: 3px solid red; */
+    margin-top: 43px;
+    margin-left: 60px;
+    position: relative;
+    display: inline-flex;
+}
+.new-imag .new1 img{
+    /* border: 3px solid purple; */
+    width: 300px;
+    height: 300px;
+}
+.new-imag .new2 img{
+    /* border: 3px solid purple; */
+    width: 300px;
+    height: 300px;
+}
+.new-imag .new3 img{
+    /* border: 3px solid purple; */
+    width: 300px;
+    height: 300px;
+}
+.new-imag .new4 img{
+    /* border: 3px solid purple; */
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: 790px;
+    margin-left: -1096px;
+}
+.new-imag .new5 img{
+    /* border: 3px solid purple; */
+    width: 300px;
+   margin-bottom: 76px;
+    margin-top: 790px;
+    height: 300px;
+    margin-left: -696px;
+}
+.new-imag .new6 img{
+    /* border: 3px solid purple; */
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: 790px;
+    margin-left: -294px;
+}
+.new-imag img{
+    display: flex;
+    /* border: 3px solid red; */
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    /* margin: 30px; */
+    margin-left: 100px;
+   text-align: center;
+   border-radius: 10px;
+   margin-top: 380px;
+   box-shadow: 10px 10px 10px rgba(11, 11, 11, 0.589);
+   padding-bottom: -30px;
+}
+/***
+=============================================
+    New Page Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Shop Page Start
+=============================================
+***/
+#Shop{
+    width: 100%;
+    height: 3170px;
+    /* border: 2px solid grey; */
+    background-color:  rgb(201, 195, 184);
+    margin-top: 20px;
+}
+.containar h2{
+    margin-left: 740px;
+    margin-top: 120px;
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.containar h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+}
+.containar h2:nth-child(2){
+    color: lightslategrey;
+    animation: animate 4s ease-in-out infinite;
+}
+  @keyframes animate {
+    0%,
+    100%{
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+} 
+/***
+=============================================
+    Boy Watch Start
+=============================================
+***/
+.watches h2{
+    text-align: center;
+    font-family: fancy;
+    font-size: 40px;
+    margin-left: 630px;
+    margin-top: 190px;
+    position: absolute;
+}
+.watches .icon{
+    /* border: 3px solid red; */
+    width: 220px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 260px;
+    margin-left: 70px;
+    position: absolute;
+    border-radius: 10px;
+}
+.watches .icon2{
+    /* border: 3px solid purple; */
+    width: 220px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 260px;
+    margin-left: 365px;
+    position: absolute;
+    border-radius: 10px;
+}
+.watches .icon3{
+    /* border: 3px solid purple; */
+    width: 220px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 260px;
+    margin-left: 655px;
+    position: absolute;
+    border-radius: 10px;
+}
+.watches .icon5{
+    /* border: 3px solid purple; */
+    width: 220px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 260px;
+    margin-left: 940px;
+    position: absolute;
+    border-radius: 10px;
+}
+.watches .icon4{
+    /* border: 3px solid purple; */
+    width: 220px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 260px;
+    margin-left: 1230px;
+    position: absolute;
+    border-radius: 10px;
+}
+.icon h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+    margin-top: 270px;
+}
+.icon p{
+    margin-left: 9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon2 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+        margin-top: 270px;
+}
+.icon2 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon3 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+    margin-top: 270px;
+}
+.icon3 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon5 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+    margin-top: 270px;
+}
+.icon5 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon4 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+    margin-top: 270px;
+}
+.icon4 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.star{
+    padding: 7px;
+    color: gold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.shop .watches  {
+    display: inline-flex;
+}
+.watches .img img{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* border: 3px solid red; */
+    margin-top: -260px;
+    margin-left: 10px;
+    position: absolute;
+}
+/***
+=============================================
+    Boy Watch Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Girl's Bag Start
+=============================================
+***/
+.b{
+    font-size: 40px;
+    font-family: fancy;
+    text-align: center;
+    margin-top: 640px;
+}
+#shop1{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 500px;
+    margin-top: -50px;
+    position: absolute;
+}
+.shop1 .bag{
+    /* border: 3px solid purple; */
+    height: 500px;
+    width: 99%;
+    margin-top: 15px;
+}
+.bag .icon{
+    /* border: 3px solid red; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 70px;
+    position: absolute;
+    border-radius: 10px;
+}
+.bag .icon2{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 365px;
+    position: absolute;
+    border-radius: 10px;
+}
+.bag .icon3{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 655px;
+    position: absolute;
+    border-radius: 10px;
+}
+.bag .icon5{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 940px;
+    position: absolute;
+    border-radius: 10px;
+}
+.bag .icon4{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 1230px;
+    position: absolute;
+    border-radius: 10px;
+}
+.icon h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon2 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+}
+.icon2 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon3 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon3 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon5 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon5 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon4 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon4 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.star{
+    padding: 7px;
+    color: gold;
+    font-size: 20px;
+}
+.shop1 .bag {
+    display: inline-flex;
+}
+.bag .img img{
+    width: 205px;
+    height: 250px;
+    margin: 10px;
+    margin-top: -260px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+/***
+=============================================
+    Girl's Bag Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Boy's Shirt Start
+=============================================
+***/
+.bo{
+    width: 100%;
+    height: 40px;
+    /* border: 3px solid red; */
+    margin-top: 400px;
+}
+.bo h2{
+    font-size: 50px;
+    font-family: fancy;
+    text-align: center;
+    position: absolute;
+    margin-top: 20px;
+   margin-left: 660px;
+}
+#shop2{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 800px;
+    margin-top: -40px;
+    position: absolute;
+}
+.shop2 .boy{
+    /* border: 3px solid purple; */
+    height: 500px;
+    width: 99%;
+    margin-top: 15px;
+}
+.boy .icon{
+    /* border: 3px solid red; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 110px;
+    margin-left: 70px;
+    position: absolute;
+    border-radius: 10px;
+}
+.boy .icon2{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 110px;
+    margin-left: 365px;
+    position: absolute;
+    border-radius: 10px;
+}
+.boy .icon3{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 110px;
+    margin-left: 655px;
+    position: absolute;
+    border-radius: 10px;
+}
+.boy .icon5{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 110px;
+    margin-left: 940px;
+    position: absolute;
+    border-radius: 10px;
+}
+.boy .icon4{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 110px;
+    margin-left: 1230px;
+    position: absolute;
+    border-radius: 10px;
+}
+.icon h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon2 h4{
+    margin-left: 14px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px
+}
+.icon2 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon3 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon3 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon5 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon5 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon4 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon4 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.star{
+    padding: 7px;
+    color: gold;
+    font-size: 20px;
+}
+.shop2 .boy {
+    display: inline-flex;
+}
+.boy .img img{
+    width: 205px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -260px;
+}
+/***
+=============================================
+    Boy's Shirt Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Girl's Shirt Start
+=============================================
+***/
+.gi{
+    width: 100%;
+    height: 40px;
+    /* border: 3px solid red; */
+    margin-top: 460px;
+}
+.gi h2{
+    font-size: 50px;
+    font-family: fancy;
+    text-align: center;
+}
+#shop3{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 800px;
+    margin-top: -35px;
+    position: absolute;
+}
+.shop3 .girl{
+    /* border: 3px solid purple; */
+    height: 500px;
+    width: 99%;
+    margin-top: 15px;
+}
+.girl .icon{
+    /* border: 3px solid red; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 70px;
+    position: absolute;
+    border-radius: 10px;
+}
+.girl .icon2{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 365px;
+    position: absolute;
+    border-radius: 10px;
+}
+.girl .icon3{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 655px;
+    position: absolute;
+    border-radius: 10px;
+}
+.girl .icon5{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 940px;
+    position: absolute;
+    border-radius: 10px;
+}
+.girl .icon4{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 1230px;
+    position: absolute;
+    border-radius: 10px;
+}
+.icon4 .img{
+    margin-top: 270px;
+}
+.icon h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon2 h4{
+    margin-left: 14px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px
+}
+.icon2 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon3 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon3 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon5 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon5 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon4 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon4 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.star{
+    padding: 7px;
+    color: gold;
+    font-size: 20px;
+}
+.shop3 .girl {
+    display: inline-flex;
+}
+.girl .img img{
+    width: 205px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -260px;
+}
+/***
+=============================================
+    Girl's Shirt Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Girl's Bracelets Start
+=============================================
+***/
+.br{
+    width: 100%;
+    height: 40px;
+    /* border: 3px solid red; */
+    margin-top: 430px;
+}
+.br h2{
+    font-size: 50px;
+    font-family: fancy;
+    text-align: center;
+}
+#shop4{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 800px;
+    margin-top: -30px;
+    position: absolute;
+}
+.shop4 .brace{
+    /* border: 3px solid purple; */
+    height: 500px;
+    width: 99%;
+    margin-top: 15px;
+}
+.brace .icon{
+    /* border: 3px solid red; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 70px;
+    position: absolute;
+    border-radius: 10px;
+}
+.brace .icon2{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 365px;
+    position: absolute;
+    border-radius: 10px;
+}
+.brace .icon3{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 655px;
+    position: absolute;
+    border-radius: 10px;
+}
+.brace .icon5{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 940px;
+    position: absolute;
+    border-radius: 10px;
+}
+.brace .icon4{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 1230px;
+    position: absolute;
+    border-radius: 10px;
+}
+.icon h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon2 h4{
+    margin-left: 14px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px
+}
+.icon2 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon3 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon3 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon5 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon5 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon4 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon4 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.star{
+    padding: 7px;
+    color: gold;
+    font-size: 20px;
+}
+.shop4 .brace {
+    display: inline-flex;
+}
+.brace .img img{
+    width: 205px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -260px;
+}
+/***
+=============================================
+    Girl's Bracelets Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Girl's Rings Start
+=============================================
+***/
+.rin{
+    width: 100%;
+    height: 40px;
+    /* border: 3px solid red; */
+    margin-top: 450px;
+}
+.rin h2{
+    font-size: 50px;
+    font-family: fancy;
+    text-align: center;
+}
+#shop5{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 800px;
+    margin-top: -30px;
+    position: absolute;
+}
+.shop5 .ring{
+    /* border: 3px solid purple; */
+    height: 500px;
+    width: 99%;
+    margin-top: 15px;
+}
+.ring .icon{
+    /* border: 3px solid red; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 70px;
+    position: absolute;
+    border-radius: 10px;
+}
+.ring .icon2{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 365px;
+    position: absolute;
+    border-radius: 10px;
+}
+.ring .icon3{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 655px;
+    position: absolute;
+    border-radius: 10px;
+}
+.ring .icon5{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    /* background-color:gainsboro; */
+    margin-top: 80px;
+    margin-left: 940px;
+    position: absolute;
+    border-radius: 10px;
+}
+.ring .icon4{
+    /* border: 3px solid purple; */
+    width: 227px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.41);
+    margin-top: 80px;
+    margin-left: 1230px;
+    position: absolute;
+    border-radius: 10px;
+}
+.icon h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon2 h4{
+    margin-left: 14px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px
+}
+.icon2 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon3 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon3 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon5 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon5 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.icon4 h4{
+    margin-left: 9px;
+    font-family: fancy;
+    color: white;
+    font-size: 20px;
+}
+.icon4 p{
+    margin-left:9px ;
+    font-family: fancy;
+    font-weight: bold;
+    color: white;
+}
+.star{
+    padding: 7px;
+    color: gold;
+    font-size: 20px;
+}
+.shop5.ring{
+    display: inline-flex;
+}
+.ring .img img{
+    width: 205px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -260px;
+}
+/***
+=============================================
+    Girl's Rings Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Contact Page Start
+=============================================
+***/
+.Contact{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 800px;
+    position: relative;
+    margin-top: 30px;
+    margin-top: -190px;
+}
+.Contact .box{
+    margin-top: 160px;
+    width: 99%;
+    height: 1300px;
+    margin-left: 3px;
+    border-radius: 93px;
+    background: linear-gradient(315deg,rgba(107, 64, 77, 0.982), #c1bebe, #cacaca);
+    box-shadow:  -15px -15px 30px #a4a4a4,
+    15px 15px 30px #ffffff;
+}
+.box h1{
+    color: black;
+    font-family: fancy;
+}
+.feature h2{
+    margin-bottom: 40px;
+    margin-top: 170px;
+    font-size: 50px;
+    font-family: fancy;
+}
+.feature{
+    width: 400px;
+    height: 500px;
+    /* border: 3px solid yellow; */
+    margin-left: 30px;
+}
+.feature h4{
+    font-size:25px;
+    font-family: fancy;
+    padding: 5px;
+}
+.Contact .us{
+    width: 500px;
+    height: 400px;
+    /* border: 3px solid red; */
+    margin-left: 420px;
+    margin-top: -410px;
+}
+.us h1{
+    font-family: fancy;
+    position: absolute;
+    font-size: 50px;
+    margin-bottom: 150px;
+    /* border: 3px solid red; */
+    margin-left: 170px;
+    margin-top: -110px;
+}
+.ad h1{
+    font-family: fancy;
+    font-size: 40px;
+    margin-left: 139px;
+    margin-top: -60px;
+    /* border: 3px solid red; */
+    position: relative;
+}
+.ad p{
+    font-family: fancy;
+    font-size: 20px;
+    width: 400px;
+    margin-top: -150px;
+    margin-left: 140px;
+    position: absolute;
+    /* border: 3px solid red;  */
+}
+.ad .p1{
+    font-family: fancy;
+    font-size: 20px;
+    width: 400px;
+    margin-left: 30px;
+    /* border: 3px solid red;  */
+}
+.ad h2{
+    font-size: 30px;
+    font-family: fancy;
+    margin-left: 143px;
+    margin-top: -120px;
+}
+.Contact .n{
+    margin-top: 10px;
+    font-family: fancy;
+    margin-left: 140px;
+    font-weight: bold;
+}
+.ad h3{
+    font-family: fancy;
+    font-size: 30px;
+    margin-left: 140px;
+    margin-top: 19px;
+}
+.Contact .e{
+    font-family: fancy;
+    margin-top: 15px;
+    margin-left: 140px;
+    font-weight: bold;
+}
+.sug {
+    /* border: 3px solid red; */
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    margin-left: 1090px;
+    margin-top: 180px;
+    z-index: 99;
+}
+.sug h1{
+    font-size: 50px;
+    font-family: fancy;
+    color: black;
+    margin-left: 90px;
+}
+.na input{
+    width: 300px;
+    height: 40px;
+    margin-top: 38px;
+    margin-left: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.na input:hover{
+    background-color: white;
+    color: black;
+}
+.em input{
+    width: 300px;
+    height: 40px;
+    margin-left: 60px;
+    margin-top: 38px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.em input:hover{
+    background-color: white;
+    color: black;
+}
+.me textarea{
+    width: 300px;
+    height: 96px;
+    margin-left: 60px;
+    margin-top: 38px;
+    resize: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.me textarea:hover{
+    background-color: white;
+    color: black;
+}
+.Social{
+    width: 400px;
+    height: 500px;
+    /* border: 3px solid red; */
+    position: absolute;
+    margin-top: 740px;
+    z-index: 99;
+}
+.Social h1{
+    color: black;
+    font-family: fancy;
+    font-size: 50px;
+    margin-left: 40px;
+}
+.ma{
+    height: 500px;
+    width: 450px;
+    /* border: 3px solid red; */
+    margin-left: 450px;
+    position: absolute;
+    margin-top: 730px;
+    z-index: 99;
+}
+.ma h1{
+    margin-top: 10px;
+    color: black;
+    font-family: fancy;
+    font-size: 50px;
+    margin-left: 170px;
+}
+.pay{
+    height: 500px;
+    width: 500px;
+    /* border: 3px solid red; */
+    margin-left: 950px;
+    position: absolute;
+    margin-top: 760px;
+    z-index: 99;
+}
+.pay h1{
+    color: black;
+    font-family: fancy;
+    font-size: 50px;    
+    margin-left: 190px;
+    margin-top: -20px;
+}
+.ac{
+    height:70px;
+    width:400;
+    /* border:3px solid red; */
+    margin-top: 70px;
+    display: flex;
+}
+.ac a i{
+    font-size: 50px;
+    text-decoration: none;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+.map{
+    height:400px;
+    width:400;
+    /* border:3px solid rgb(99, 55, 212); */
+    margin-top: 20px;
+}
+.map iframe{
+    width: 444px;
+    height: 370px;
+    margin-top: 25px;
+}
+.card{
+    /* border: 3px solid red; */
+    height: 70px;
+    width: 200px;
+    z-index: 99;
+}
+.card h3{
+    font-family: fancy;
+    margin-top: 40px;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 170px;
+    width: 270px;
+}
+.card .ca{
+    height: 70px;
+    width: 300px;
+    /* border: 3px solid rgb(117, 59, 59); */
+    margin-left: 200px;
+    margin-top: -5px;
+    z-index: 99;
+}
+.ca img{
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 70px;
+    margin-top: 50px;
+    margin-left: -90px;
+}
+.label{
+    font-family: fancy;
+    font-size: 22px;
+    font-weight:bold ;
+}
+input{
+    width: 495px;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background-color: black;
+}
+.input:hover{
+    background-color: black;
+    color: white;
+}
+.card{
+    margin-top: 10px;
+    position: relative;
+}
+.card input:hover{
+ background-color: white;
+ color: white;
+}
+.date {
+    margin-top: 4px;
+    position: absolute;
+}
+.date input:hover{
+    background-color: white;
+    color: white;
+}
+.cvv{
+    position: absolute;
+    margin-top: 80px;
+}
+.cvv input:hover{
+    background-color: white;
+    color: white;
+}
+.submit input{
+    background-color: white;
+    margin-top: 210px;
+}
+.center{
+    width: 100%;
+    height: 950px;
+    /* border: 3px solid red; */
+}
+.containeer h2{
+    margin-left: 740px;
+    margin-top: 90px;
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.containeer h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(60, 60, 60);
+}
+.containeer h2:nth-child(2){
+    color: black;
+    animation: animate 4s ease-in-out infinite;
+}
+  @keyframes animate {
+    0%,
+    100%{
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+
+    }
+}  
+/***
+=============================================
+    Contact Page Finish
+=============================================
+***/ 
+
+
+
+/***
+=============================================
+    Footer Page Start
+=============================================
+***/
+.footer{
+    /* border: 3px solid red; */
+    position: absolute;
+    margin-top: 680px;
+    width: 98%;
+    height: 120px;
+    margin-left: 3px;
+    border-radius: 50px;
+    background: linear-gradient(315deg,rgba(107, 64, 77, 0.982), #c1bebe, #cacaca);
+    box-shadow:  -15px -15px 30px #a4a4a4,
+    15px 15px 30px #ffffff;
+}
+.copy{
+    margin-top: 400px;position: absolute;
+    margin-left: 40px;
+}
+.footer p{
+    font-family: fancy;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 56px;
+    margin-left:500px;
+    /* margin-top: 100px; */
+    position: absolute;
+}
+.footer p{
+    font-family: fancy;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 56px;
+    margin-left:500px;
+    /* margin-top: 100px; */
+    position: absolute;
+}
+.footer .copy{
+    font-family: fancy;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
+    position: absolute;
+    margin-left: 640px;
+}
+.footer .all{
+    font-family: fancy;
+    font-size: 23px;
+    margin-top: 55px;
+    margin-left: 800px;
+    font-weight: bold;
+}
+/***
+=============================================
+    Footer Page Finish
+=============================================
+***/

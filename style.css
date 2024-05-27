@@ -1,0 +1,555 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: fsncy;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* body{
+    height: 700px;
+    background-image: url('assassins.jpg0001.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+/***
+=============================================
+    Header Start
+=============================================
+***/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: red; */
+    /* background: transparent;
+    backdrop-filter: blur(50px); */
+    box-shadow: 10px 5px 10px black;
+    width: 100%;
+    padding: 1.5rem 2%;
+   justify-content: space-between;
+   display: inline-flex;
+  }
+  .header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(107, 102, 102), transparent);
+    top: 0;
+    left: -100%;
+    transition: .5s;
+
+  }
+  .header:hover::after{
+    left: 100%;
+  }
+  .logo{
+    font-size: 25px;
+    color: gray;
+    margin-top: 3px;
+    margin-left: -25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.logo img{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    margin-top: -69px;
+    margin-left: -55px;
+}
+/***
+=============================================
+    Header Finish
+=============================================
+***/
+
+
+
+/***
+=================================================================
+    Search Box for screen 768px, 435.60px and 375.20px   start
+=================================================================
+***/
+.Box{
+    position: absolute;
+    background: #2f3640;
+    height: 25px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-left: 420PX;
+    margin-top: -35px;
+}
+.Box input{
+    position: relative;
+    margin-top: -10px;
+}
+.Box:hover > .Text{
+    width: 180px;
+}
+    
+    .Box:hover > .Btn{
+    background-color: black;
+}
+.Btn{
+    text-decoration: none;
+    color: white;
+    /* float: right; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    transition: 0.6s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: -7px;
+    position: fixed;
+}
+
+.Btn i{
+    font-size: 25px;
+}
+.Text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+     margin-top: -4px;
+     margin-left: 45px;
+    justify-content: center;
+}
+.T{
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    /* border: 3px solid red; */
+    margin-top: 350px;
+    margin-left: 630px;
+    border-radius: 20px;
+}
+  .btn-box2{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    height: 30px;
+    margin-left: 680px;
+    margin-top: -32px; 
+    position: absolute;
+}
+ button.btn2 a{
+    color: black;
+    font-size: 19px;
+    font-family: fancy;
+    font-weight: bold;
+}
+ button.btn2{
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color:rgb(112, 53, 72);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+    font-family: fancy;
+    position: relative;
+    font-size: 19px;
+}
+button.btn2:hover{
+    color: black;
+}
+button.btn2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40px;
+    background:rgb(255, 196, 84);
+    transition: .4s;
+    z-index: -1;
+    border-radius: 10px;
+}
+button.btn2:hover::before{
+    width: 120px;
+}
+.Btn-Box2{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    height: 30px;
+    margin-left: 655px;
+    margin-top: -32px; 
+    position: absolute;
+}
+ button.Btn2 a{
+    color: black;
+    font-size: 19px;
+    font-family: fancy;
+    font-weight: bold;
+}
+ button.Btn2{
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    background-color:rgb(112, 53, 72);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+    font-family: fancy;
+    position: relative;
+    font-size: 19px;
+}
+button.Btn2:hover{
+    color: black;
+}
+button.Btn2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40px;
+    background:rgb(255, 196, 84);
+    transition: .4s;
+    z-index: -1;
+    border-radius: 10px;
+}
+button.Btn2:hover::before{
+    width: 120px;
+}
+.Box{
+    display: none;
+   }
+.Btn-Box2{
+    display: none;
+}
+/***
+=================================================================
+    Search Box for screen 768px, 435.60px and 375.20px   Finish
+=================================================================
+***/
+
+
+
+/***
+=============================================
+    Navbar Start
+=============================================
+***/
+
+
+.navbar{
+    font-size: 25px;
+   margin-right: 410px;
+   margin-top: 4px;
+}
+.navbar a{
+    color: gray;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}  
+.icons{
+    color: black;
+    font-size: 30px;
+    display: none;
+    position: absolute;
+    right: 52.3%;
+    top: 28px;
+    cursor: pointer;
+}
+  #check{
+    display: none;
+}
+.box{
+    position: absolute;
+    background: #2f3640;
+    height: 25px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-left: 27.5rem;
+    margin-top: -35px;
+   z-index: 99;
+}
+.box input{
+    position: relative;
+    margin-top: -10px;
+}
+.box:hover > .text{
+    width: 180px;
+}
+    
+.box:hover > .btn{
+    background-color: black;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    /* float: right; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    transition: 0.6s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: -7px;
+}
+
+.btn i{
+    font-size: 30px;
+}
+.text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+     margin-top: -4px;
+    justify-content: center;
+}
+.t{
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    /* border: 3px solid red; */
+    margin-top: 350px;
+    margin-left: 630px;
+    border-radius: 20px;
+}
+.navbar a:hover{
+    color: black;
+}
+/***
+=============================================
+    Navbar Finish
+=============================================
+***/
+
+
+
+/***
+=============================================
+    Home Page Start
+=============================================
+***/
+.img img{
+    background-repeat: no-repeat;
+    width: 100%;
+    /* border: 3px solid purple; */
+    height: 657px;
+    z-index: -99;
+    margin-top: 82px;
+    position: absolute;
+}
+.salogn{
+    width:700px;
+    height: 280px;
+    /* border: 3px solid red; */
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 360px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: fancy;
+    z-index: -1;
+}
+.btn-box1{
+    display: flex;
+    justify-content: space-between;
+    width: 520px;
+    height: 30px;
+    margin-left: 300px;
+    margin-top: 50px; 
+    position: relative;
+}
+ button.btn1 a{
+    color: black;
+    font-size: 19px;
+    font-family: fancy;
+    font-weight: bold;
+}
+ button.btn1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color:rgb(112, 53, 72);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+    font-family: fancy;
+    position: relative;
+}
+button.btn1:hover{
+    color: black;
+}
+button.btn1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40px;
+    background:rgb(255, 196, 84);
+    transition: .4s;
+    z-index: -1;
+    border-radius: 10px;
+}
+button.btn1:hover::before{
+    width: 120px;
+}
+
+
+
+/***
+=============================================
+    About Page Start
+=============================================
+***/
+#about{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 650px;
+    margin-top: 760px;
+    z-index: -1;
+}
+.container h2{
+    margin-left: 700px;
+    margin-top: 80px;
+    color: white;
+    font-size: 8em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.container h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+.container h2:nth-child(2){
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    100%{
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+section .cont{
+    width: 800px;
+    height: 400px;
+    /* border: 3px solid red; */
+    margin-top: 240px;
+    position: absolute;
+}
+section .cont p{
+    font-size: 27px;
+    font-family: fancy; 
+    text-align: center;
+    padding: 5px;
+    color: white;
+   /* margin-left: -40px; */
+   margin-top: 40px;
+} 
+section .pic{
+    width: 400px;
+    height: 400px;
+    /* border: 3px solid red; */
+    float: right;
+    margin-top: 220px;
+    margin-right: 90px;
+    box-shadow: 10px  10px 25px rgba(228, 7, 7, 0.766);
+}
+section .pic img{
+    width:400px;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+section .pic img:hover{
+    transform: scaleX(1.1);
+}
+
+/***
+=============================================
+    About Page Finish
+=============================================
+***/
+
+
+
+
